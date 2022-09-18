@@ -7,10 +7,34 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  background-color: black;
+}
+
+.nasa-photo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2, h4 {
+  font-family: Papyrus, sans-serif;
+  color: white;
+}
+
+
+.descrip {
+  max-width: 70%;
+  font-family: Herculanum, sans-serif;
+  font-size: larger;
+  color: white;
+  line-gap-override: 10px;
+}
+
+img {
+  max-width: 60%;
+  object-fit: cover;
+  border-radius: 10%;
 }
 
 .App-header {
@@ -28,11 +52,3 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
