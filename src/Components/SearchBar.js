@@ -14,6 +14,7 @@ const StyledInput = styled.input`
 `
  
 export default function Search(props) {
+    // console.log(`search props`, props);
     const changeHandler = event => {
         // console.log(`Event`, event)
         props.setSearchDate(event.target.value);

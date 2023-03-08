@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
-// import { Button } from 'reactstrap';
 import axios from 'axios';
 import "./App.css";
 import NasaPhoto from "./Components/NasaPhoto";
-import StyledSearchBar from './Components/SearchBar';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import Search from './Components/SearchBar';
-import styled from 'styled-components';
 
 
 function App() {
+  // NASA APOD COMPONENT 
   const [data, setData] = useState();
   const [searchDate, setSearchDate] = useState();
 
@@ -32,8 +29,31 @@ function App() {
       .catch(err => console.error(err))
   }
 
+  // DOG APOD COMPONENT
+  // const [dogData, setDogData] = useState();
+  // const [searchDog, setSearchDog] = useState();
+
+  // useEffect(() => {
+  //   axios.get(`https://dog.ceo/api/breeds${setSearchDog}/image/random`)
+  //     .then(res => {
+  //       setDogData(res.data);
+  //       console.log(`Results`, res.data);
+  //     })
+  //     .catch(err => console.error(`DevNeeded`, err))
+  // }, [])
+
+  // AN ATTEMPT TO USE A MARVEL API.... NOT WORKING
+  // useEffect (() => {
+  //   axios.get(`http://gateway.marvel.com/v1/public/comics?ts=1&api_key=fe0c01afea1f03013cd96277af69ae28&hash=e3b719b719b9e0dc4db9308815e3c813`)
+  //     .then(res => {
+  //       console.log(res);
+  //     })
+  //     .catch(err => console.error(err))
+  // }, [])
+
   return (
     <div>
+          {/* <Menu setDogData={setDogData} input={setSearchDog} /> */}
           <Search setSearchDate={setSearchDate} inputDate={inputDate}/>
         <div className="App">
           { data && <NasaPhoto photo={data} />}
